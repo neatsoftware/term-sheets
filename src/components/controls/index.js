@@ -11,11 +11,17 @@ export const controlsView = props =>
     ? h(commandEditor, props)
     : h('div', { class: styles.controls }, [
         h('div', { class: styles.control }, [
-          h('label', { class: styles.controlLabel }, 'Background:'),
-          h('input', { type: 'checkbox', checked: props.background, onchange: props.updateBackground }),
+          h('label', { class: styles.controlLabel, for: 'backgroundCheckbox' }, 'Background:'),
+          h('input', {
+            type: 'checkbox',
+            checked: props.background,
+            onchange: props.updateBackground,
+            id: 'backgroundCheckbox'
+          }),
           h('input', {
             type: 'color',
             placeholder: 'Top color',
+            title: 'Top background color',
             value: props.bgColor1,
             oninput: props.updatebgColor1,
             disabled: !props.background
@@ -23,66 +29,81 @@ export const controlsView = props =>
           h('input', {
             type: 'color',
             placeholder: 'Bottom color',
+            title: 'Bottom background color',
             value: props.bgColor2,
             oninput: props.updatebgColor2,
             disabled: !props.background
           })
         ]),
         h('div', { class: styles.control }, [
-          h('label', { class: styles.controlLabel }, 'Title bar:'),
-          h('input', { type: 'checkbox', checked: props.titleBar, onchange: props.updateTitleBar }),
+          h('label', { class: styles.controlLabel, for: 'titlebarCheckbox' }, 'Title bar:'),
+          h('input', {
+            type: 'checkbox',
+            checked: props.titleBar,
+            onchange: props.updateTitleBar,
+            id: 'titlebarCheckbox'
+          }),
           h('input', {
             placeholder: 'Title',
+            title: 'Title bar text',
             value: props.title,
             oninput: props.updateTitle,
             disabled: !props.titleBar
           }),
-          h('label', { class: styles.controlLabelSub }, 'Buttons:'),
-          h('input', { type: 'checkbox', checked: props.windowButtons, onchange: props.updateWindowButtons })
+          h('label', { class: styles.controlLabelSub, for: 'buttonsCheckbox' }, 'Buttons:'),
+          h('input', {
+            type: 'checkbox',
+            checked: props.windowButtons,
+            onchange: props.updateWindowButtons,
+            id: 'buttonsCheckbox'
+          })
         ]),
         h('div', { class: styles.control }, [
-          h('label', { class: styles.controlLabel }, 'Prompt:'),
-          h('input', { placeholder: 'Prompt', value: props.prompt, oninput: props.updatePrompt })
+          h('label', { class: styles.controlLabel, for: 'promptInput' }, 'Prompt:'),
+          h('input', { placeholder: 'Prompt', value: props.prompt, oninput: props.updatePrompt, id: 'promptInput' })
         ]),
         h('div', { class: styles.control }, [
-          h('label', { class: styles.controlLabel }, 'Width:'),
+          h('label', { class: styles.controlLabel, for: 'widthInput' }, 'Width:'),
           h('input', {
             placeholder: 'Width',
             type: 'number',
             min: 1,
             value: props.width,
             oninput: props.updateWidth,
-            onkeypress: numbersOnly
+            onkeypress: numbersOnly,
+            id: 'widthInput'
           })
         ]),
         h('div', { class: styles.control }, [
-          h('label', { class: styles.controlLabel }, 'Height:'),
+          h('label', { class: styles.controlLabel, for: 'heightInput' }, 'Height:'),
           h('input', {
             placeholder: 'Height',
             type: 'number',
             min: 1,
             value: props.height,
             oninput: props.updateHeight,
-            onkeypress: numbersOnly
+            onkeypress: numbersOnly,
+            id: 'heightInput'
           })
         ]),
         h('div', { class: styles.control }, [
-          h('label', { class: styles.controlLabel }, 'Speed:'),
+          h('label', { class: styles.controlLabel, for: 'speedInput' }, 'Speed:'),
           h('input', {
             placeholder: 'Speed',
             type: 'number',
             min: 1,
             value: props.speed,
             oninput: props.updateSpeed,
-            onkeypress: numbersOnly
+            onkeypress: numbersOnly,
+            id: 'speedInput'
           })
         ]),
         h('div', { class: styles.control }, [
           h('label', { class: styles.controlLabel }, 'Content:'),
           h('button', { onclick: props.toggleEditingCommands }, 'Edit...'),
           h('button', { onclick: props.restart }, 'Restart'),
-          h('label', { class: styles.controlLabelSub }, 'Demos:'),
-          h('select', { onchange: props.updateDemo }, [
+          h('label', { class: styles.controlLabelSub, for: 'demoSelect' }, 'Demos:'),
+          h('select', { onchange: props.updateDemo, id: 'demoSelect' }, [
             h('option', { disabled: true, selected: true, hidden: true, value: '' }, 'Select a demo'),
             h('option', { value: 'features' }, 'Feature tests'),
             h('option', { value: 'cra' }, 'Create react app'),

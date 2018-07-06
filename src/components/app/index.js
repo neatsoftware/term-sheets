@@ -9,12 +9,12 @@ export const appView = props =>
     h(
       'p',
       { class: styles.appTagline },
-      'Create animated terminal presentations. Export as SVG, animated GIF, or HTML+CSS.'
+      'Create animated terminal presentations. Export as SVG, animated GIF, or HTML+CSS'
     ),
     h('div', { class: styles.exportContainer, oncreate: props.updateTerminalEl }, [h(terminalView, props)]),
     h(controlsView, props),
     h('div', { class: styles.appLinks }, [
-      h('a', { href: 'https://github.com/gpoitch/term-sheets', target: '_blank' }, 'Github'),
-      h('a', { href: 'https://twitter.com/gpoitch', target: '_blank' }, 'Twitter')
+      h('a', { href: 'https://github.com/gpoitch/term-sheets', target: '_blank', rel: 'noopener' }, 'Github'),
+      h('a', { href: 'https://twitter.com/gpoitch', target: '_blank', rel: 'noopener' }, 'Twitter')
     ])
   ])
