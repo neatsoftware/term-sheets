@@ -64,7 +64,7 @@ const terminalInputView = props => {
       { class: styles.terminalInput, 'data-prompt': prompt, style: { animationDelay: `${startDelay}ms` } },
       Array.from(command.input).map((char, i) => {
         const charDelay = startDelay + DELAY_TYPE_START / speed + (DELAY_TYPE_CHAR * i) / speed
-        return h('span', { class: styles.inputChar, style: { animationDelay: `${charDelay}ms` } }, char)
+        return h('span', { style: { animationDelay: `${charDelay}ms` } }, char)
       })
     ),
     h('div', { class: styles.cursor, style: { animationDelay: `${startDelay}ms,${cursorHideDelay}ms` } })

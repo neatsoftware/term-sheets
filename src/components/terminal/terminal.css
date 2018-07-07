@@ -67,9 +67,9 @@
   flex: 1;
   overflow: auto;
   user-select: text;
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Inconsolata', Consolas, 'Lucida Console', 'Lucida Sans Typewriter', Monaco, monospace;
   font-size: 14px;
-  line-height: 19px;
+  line-height: 1.36;
   letter-spacing: 0.03em;
   color: #ebebeb;
   white-space: pre-wrap; /* prevent spaces from collapsing */
@@ -84,41 +84,35 @@
 .terminalInput {
   display: inline-flex;
   flex-wrap: wrap;
+  vertical-align: middle;
 }
 
 .terminalInput:before {
   display: inline-block;
+  vertical-align: middle;
   color: #5ed7ff;
   content: attr(data-prompt);
   padding: 0 9px 0 0;
-  vertical-align: top;
 }
 
-.inputChar {
-  display: inline-block;
-}
-
-/* things that appear after a delay.
-   NOTE: 0.01ms because safari doesnt like 0s */
 .terminalInput,
-.inputChar,
+.terminalInput span,
 .terminalOutput {
   width: 0;
   height: 0;
   overflow: hidden;
-  animation: appear 0.001ms linear;
-  animation-fill-mode: forwards;
+  animation: appear 0.001ms linear forwards;
 }
 
 .terminalOutputReplace {
-  animation: appear 0.001ms linear forwards, hide 0.001ms linear forwards;
+  animation: appear 0.001ms linear forwards, hide 0ms linear forwards;
 }
 
 .cursor {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   background: #666;
-  animation: cursorAppear 0.001ms linear forwards, hide 0.001ms linear forwards;
+  animation: cursorAppear 0.001ms linear forwards, hide 0ms linear forwards;
 }
 
 @keyframes appear {

@@ -92,6 +92,7 @@ function buildCss() {
   return [].slice
     .call(document.getElementById('terminalCss').sheet.cssRules)
     .reduce((string, rule) => string + rule.cssText, '')
+    .replace(/\n/g, '')
 }
 
 function downloadUrl(url, ext) {
