@@ -1,12 +1,12 @@
 # Term Sheets
 
-Create animated terminal presentations. Export as SVG, animated GIF, or HTML+CSS
+Create animated terminal presentations. Export as SVG, animated GIF, or HTML+CSS.
 
 ### [Use app ↗️](https://gpoitch.github.io/term-sheets)
 
 ---
 
-Term sheets is a javascript app to produce terminal typing and output animations for embedding in presentations, readmes, tweets, etc. Other solutions usually involve recording a live screen. I wanted a way to simply provide a payload of instructions so I didn't have to reherse my typing and wait for network output, as well as style it to look nice.
+Term sheets is a JavaScript app to produce terminal typing and output animations for embedding in presentations, readmes, tweets, etc. Other solutions usually involve recording a live screen. I wanted a way to simply provide a payload of instructions so I didn't have to rehearse my typing and wait for network output, as well as style it to look nice.
 
 ### Example:
 
@@ -17,5 +17,5 @@ Term sheets is a javascript app to produce terminal typing and output animations
 ### Goals:
 
 1.  Client-side only
-2.  Exported term-sheets should be pure markup/css
-3.  SVG exports should remain portable/strict so they can be embedded in github readmes
+2.  Exported term-sheets should be pure markup/CSS
+3.  SVG exports should remain portable/strict so they can be embedded in GitHub readmes
