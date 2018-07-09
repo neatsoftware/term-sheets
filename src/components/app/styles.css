@@ -37,6 +37,7 @@ input {
   padding: 4px;
   border-radius: 3px;
   border: 1px solid #ccc;
+  max-width: 80px;
 }
 
 .app {

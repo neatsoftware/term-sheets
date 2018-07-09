@@ -102,9 +102,8 @@ export const controlsView = props =>
           h('label', { class: styles.controlLabel }, 'Content:'),
           h('button', { onclick: props.toggleEditingCommands }, 'Edit...'),
           h('button', { onclick: props.restart }, 'Restart'),
-          h('label', { class: styles.controlLabelSub, for: 'demoSelect' }, 'Demos:'),
-          h('select', { onchange: props.updateDemo, id: 'demoSelect' }, [
-            h('option', { disabled: true, selected: true, hidden: true, value: '' }, 'Select a demo'),
+          h('select', { onchange: props.updateDemo, title: 'Demos' }, [
+            h('option', { disabled: true, selected: true, hidden: true, value: '' }, 'Or select a demo'),
             h('option', { value: 'features' }, 'Feature tests'),
             h('option', { value: 'cra' }, 'Create react app'),
             h('option', { value: 'sammie' }, 'SAMMIE')
@@ -143,6 +142,8 @@ export const controlsView = props =>
             'GIF',
             h('span', { class: styles.alpha }, '(alpha)')
           ]),
-          h('button', { onclick: props.export }, props.isExporting ? 'Exporting...' : 'Export')
+          h('div', { class: styles.exportActions }, [
+            h('button', { onclick: props.export }, props.isExporting ? 'Exporting...' : 'Export')
+          ])
         ])
       ])

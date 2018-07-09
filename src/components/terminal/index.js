@@ -10,7 +10,7 @@ export const terminalView = props =>
   h(
     'div',
     {
-      class: props.background && styles.terminalBackground,
+      class: [styles.terminalContainer, props.background && styles.terminalBackground].filter(Boolean).join(' '),
       style: {
         width: props.width + 'px',
         height: props.height + 'px',
@@ -20,15 +20,11 @@ export const terminalView = props =>
     [h('div', { class: styles.terminal }, [h(terminalTitleView, props), h(terminalContentView, props)])]
   )
 
-const terminalTitleView = props =>
+const terminalTitleView = ({ titleBar, title, windowButtons }) =>
   h(
     'div',
-    {
-      class: [props.titleBar && styles.terminalTitleBar, props.windowButtons && styles.terminalButtons]
-        .filter(Boolean)
-        .join(' ')
-    },
-    props.titleBar && props.title
+    { class: [titleBar && styles.terminalTitleBar, windowButtons && styles.terminalButtons].filter(Boolean).join(' ') },
+    titleBar && title
   )
 
 const terminalContentView = props => {

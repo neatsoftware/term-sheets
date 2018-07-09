@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
-.terminalBackground {
+.terminalContainer {
   max-width: 100%;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.terminalBackground {
   padding: 45px;
-  max-width: 100%;
 }
 
 .terminal {

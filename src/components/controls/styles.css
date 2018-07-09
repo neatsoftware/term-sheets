@@ -11,7 +11,7 @@
   display: inline-block;
   font-size: 12px;
   text-transform: uppercase;
-  margin: 0 10px;
+  margin: 0 10px 10px;
 }
 
 .controlLabel {
@@ -19,9 +19,13 @@
 }
 
 .exportOptLabel {
-  padding: 0 16px 0 4px;
+  padding: 0 12px 0 4px;
   font-size: 12px;
   text-transform: uppercase;
+}
+
+.exportActions {
+  text-align: center;
 }
 
 .alpha {

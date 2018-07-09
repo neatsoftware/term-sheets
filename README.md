@@ -11,7 +11,7 @@ Term sheets is a JavaScript app to produce terminal typing and output animations
 ### Example:
 
 <p align="center">
-  <img width="700" height="440" src="https://rawgit.com/gpoitch/term-sheets/master/example.svg">
+  <a href="https://rawgit.com/gpoitch/term-sheets/master/example.svg"><img width="700" src="https://rawgit.com/gpoitch/term-sheets/master/example.svg"></a>
 </p>
 
 ### Goals:
