@@ -2,12 +2,14 @@ import { h } from 'hyperapp'
 import CodeMirror from 'codemirror'
 import 'codemirror/mode/javascript/javascript.js'
 import 'codemirror/lib/codemirror.css'
+import 'codemirror/theme/dracula.css'
 import styles from './styles.css'
 
 let editor
 function setupCodeEditor(element, code) {
   editor = CodeMirror(element, {
     mode: 'javascript',
+    theme: 'dracula',
     value: JSON.stringify(code, null, 2)
   })
 }

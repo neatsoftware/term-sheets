@@ -4,6 +4,7 @@ import { exportProject } from './utils/exporting'
 import * as demos from './demos'
 
 const state = {
+  // Terminal state
   background: true,
   bgColor1: '#40bfbf',
   bgColor2: '#4095bf',
@@ -13,10 +14,11 @@ const state = {
   prompt: '~$',
   width: 780,
   height: 440,
-  exportType: 'svg',
   speed: 1,
   commands: demos.features,
-  editingCommands: false,
+  // Internal app state
+  exportType: 'svg',
+  isEditingCommands: false,
   isExporting: false,
   terminalEl: null
 }
@@ -34,7 +36,7 @@ const actions = {
   updateSpeed: e => ({ speed: e.target.value }),
   updateExportType: e => ({ exportType: e.target.value }),
   updateTerminalEl: element => ({ terminalEl: element }),
-  toggleEditingCommands: () => state => ({ editingCommands: !state.editingCommands }),
+  toggleEditingCommands: () => state => ({ isEditingCommands: !state.isEditingCommands }),
   updateIsExporting: isExporting => ({ isExporting }),
   updateDemo: e => (state, actions) => actions.updateCommandsAndPlay(demos[e.target.value]),
   updateCommands: commands => ({ commands }),

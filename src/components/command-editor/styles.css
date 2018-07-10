@@ -1,10 +1,9 @@
 .commandEditor {
   width: 100%;
   max-width: 780px;
-  min-height: 500px;
+  min-height: 550px;
 }
 
 .code {
-  border: 2px solid #ddd;
-  margin: 0 0 10px 0;
+  margin: 10px 0;
 }

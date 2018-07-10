@@ -7,7 +7,7 @@ const numbersOnly = e => {
 }
 
 export const controlsView = props =>
-  props.editingCommands
+  props.isEditingCommands
     ? h(commandEditor, props)
     : h('div', { class: styles.controls }, [
         h('div', { class: styles.control }, [
