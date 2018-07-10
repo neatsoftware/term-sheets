@@ -21,6 +21,7 @@
   border-radius: 5px;
   user-select: none;
   background: rgb(15, 20, 20);
+  position: relative;
 }
 
 .terminalBackground .terminal {
@@ -43,11 +44,9 @@
   background: linear-gradient(0deg, #cacaca, #e2e2e2);
   border-top: 0.5px solid #f3f3f3;
   border-bottom: 0.5px solid #7d7d7d;
-  position: relative;
 }
 
 .terminalButtons {
-  position: relative;
   height: 25px;
 }
 
