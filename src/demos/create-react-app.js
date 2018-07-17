@@ -19,7 +19,10 @@ export default [
     input: 'cd my-app'
   },
   {
-    input: 'npm start',
+    input: {
+      prompt: 'my-app $',
+      content: 'npm start'
+    },
     output: [
       '<br/>Starting the development server...',
       'Compiled successfully!',
