@@ -1,5 +1,6 @@
 import { h } from 'hyperapp'
 import { commandEditor } from '../command-editor'
+import * as demos from '../../demos'
 import styles from './styles.css'
 
 const numbersOnly = e => {
@@ -104,9 +105,9 @@ export const controlsView = props =>
           h('button', { onclick: props.restart }, 'Restart'),
           h('select', { onchange: props.updateDemo, title: 'Demos' }, [
             h('option', { disabled: true, selected: true, hidden: true, value: '' }, 'Or select a demo'),
-            h('option', { value: 'features' }, 'Feature tests'),
-            h('option', { value: 'cra' }, 'Create react app'),
-            h('option', { value: 'sammie' }, 'SAMMIE')
+            ...Object.keys(demos).map(name =>
+              h('option', { value: name }, name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase())
+            )
           ])
         ]),
         h('hr', { class: styles.divider }),
