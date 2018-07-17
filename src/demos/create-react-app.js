@@ -2,7 +2,14 @@ export default [
   {
     input: 'npx create-react-app my-app',
     output: [
-      'npx: installed 114 in 2.000s',
+      { content: '| Installing...', replace: true },
+      { content: '/ Installing...', replace: true },
+      { content: '- Installing...', replace: true },
+      { content: '\\ Installing...', replace: true },
+      { content: '| Installing...', replace: true },
+      { content: '/ Installing...', replace: true },
+      { content: '- Installing...', replace: true },
+      'npx: installed 67 in 3.500s',
       '<br/>Creating a new React app in <span style="color:#25BC24">~/my-app</span>',
       '<br/>Installing <span style="color:#33BBC8">react</span>, <span style="color:#33BBC8">react-dom</span>, and <span style="color:#33BBC8">react-scripts</span>...',
       { content: '| Installing...', replace: true },
@@ -20,7 +27,7 @@ export default [
   },
   {
     input: {
-      prompt: 'my-app $',
+      prompt: 'my-app$',
       content: 'npm start'
     },
     output: [
