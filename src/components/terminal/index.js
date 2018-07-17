@@ -54,11 +54,15 @@ const terminalInputView = props => {
   const command = commands[commandIndex]
   const { startDelay, inputTime } = commandTimings[commandIndex]
   const cursorHideDelay = startDelay + inputTime
+  const input = command.input
+  const isObj = typeof input === 'object'
+  const content = isObj ? input.content : input
+  const linePrompt = (isObj && input.prompt) || prompt
   return [
     h(
       'div',
-      { class: styles.terminalInput, 'data-prompt': prompt, style: { animationDelay: `${startDelay}ms` } },
-      Array.from(command.input).map((char, i) => {
+      { class: styles.terminalInput, 'data-prompt': linePrompt, style: { animationDelay: `${startDelay}ms` } },
+      Array.from(content).map((char, i) => {
         const charDelay = startDelay + DELAY_TYPE_START / speed + (DELAY_TYPE_CHAR * i) / speed
         return h('span', { style: { animationDelay: `${charDelay}ms` } }, char)
       })

@@ -15,7 +15,7 @@ const state = {
   width: 780,
   height: 440,
   speed: 1,
-  commands: demos.features,
+  commands: demos.featureTests,
   // Internal app state
   exportType: 'svg',
   isEditingCommands: false,

@@ -14,9 +14,9 @@
     "hyperapp": "^1.2.6"
   },
   "devDependencies": {
-    "autoprefixer": "^8.6.5",
+    "autoprefixer": "^9.0.0",
     "flt": "^0.4.1",
-    "parcel-bundler": "^1.9.4",
+    "parcel-bundler": "^1.9.7",
     "postcss-modules": "^1.1.0"
   },
   "browserslist": [
