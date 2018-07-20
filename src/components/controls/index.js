@@ -61,7 +61,8 @@ export const controlsView = props =>
         ]),
         h('div', { class: styles.control }, [
           h('label', { class: styles.controlLabel, for: 'promptInput' }, 'Prompt:'),
-          h('input', { placeholder: 'Prompt', value: props.prompt, oninput: props.updatePrompt, id: 'promptInput' })
+          h('input', { placeholder: 'Prompt', value: props.prompt, oninput: props.updatePrompt, id: 'promptInput' }),
+          h('input', { placeholder: 'Prompt color', value: props.promptColor, oninput: props.updatePromptColor })
         ]),
         h('div', { class: styles.control }, [
           h('label', { class: styles.controlLabel, for: 'widthInput' }, 'Width:'),
