@@ -67,7 +67,6 @@
   flex-direction: column-reverse; /* auto scrolls content to bottom */
   flex: 1;
   overflow: auto;
-  user-select: text;
   font-family: 'Inconsolata', Consolas, 'Lucida Console', 'Lucida Sans Typewriter', Monaco, monospace;
   font-size: 14px;
   line-height: 1.36;
@@ -82,20 +81,25 @@
   padding: 12px;
 }
 
+.terminalPrompt {
+  display: inline-flex;
+  flex-wrap: wrap;
+  vertical-align: middle;
+  padding: 0 9px 0 0;
+}
+
 .terminalInput {
   display: inline-flex;
   flex-wrap: wrap;
   vertical-align: middle;
+  user-select: text;
 }
 
-.terminalInput:before {
-  display: inline-block;
-  vertical-align: middle;
-  color: #5ed7ff;
-  content: attr(data-prompt);
-  padding: 0 9px 0 0;
+.terminalOutput {
+  user-select: text;
 }
 
+.terminalPrompt,
 .terminalInput,
 .terminalInput span,
 .terminalOutput {

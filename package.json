@@ -11,13 +11,13 @@
   "dependencies": {
     "codemirror": "^5.39.0",
     "gifshot": "^0.4.5",
-    "hyperapp": "^1.2.6"
+    "hyperapp": "^1.2.8"
   },
   "devDependencies": {
     "autoprefixer": "^9.0.0",
     "flt": "^0.4.1",
     "parcel-bundler": "^1.9.7",
-    "postcss-modules": "^1.1.0"
+    "postcss-modules": "^1.2.0"
   },
   "browserslist": [
     "Chrome >= 49",

@@ -50,7 +50,7 @@ const terminalContentView = props => {
 const terminalCommandView = props => [h(terminalInputView, props), h(terminalOutputView, props)]
 
 const terminalInputView = props => {
-  const { commands, commandIndex, commandTimings, prompt, speed } = props
+  const { commands, commandIndex, commandTimings, prompt, promptColor, speed } = props
   const command = commands[commandIndex]
   const { startDelay, inputTime } = commandTimings[commandIndex]
   const cursorHideDelay = startDelay + inputTime
@@ -61,7 +61,12 @@ const terminalInputView = props => {
   return [
     h(
       'div',
-      { class: styles.terminalInput, 'data-prompt': linePrompt, style: { animationDelay: `${startDelay}ms` } },
+      { class: styles.terminalPrompt, style: { color: promptColor, animationDelay: `${startDelay}ms` } },
+      linePrompt
+    ),
+    h(
+      'div',
+      { class: styles.terminalInput, style: { animationDelay: `${startDelay}ms` } },
       Array.from(content).map((char, i) => {
         const charDelay = startDelay + DELAY_TYPE_START / speed + (DELAY_TYPE_CHAR * i) / speed
         return h('span', { style: { animationDelay: `${charDelay}ms` } }, char)
