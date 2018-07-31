@@ -3,15 +3,16 @@
 }
 
 .control {
-  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  margin: 7px 0;
 }
 
 .controlLabel,
 .controlLabelSub {
-  display: inline-block;
   font-size: 12px;
   text-transform: uppercase;
-  margin: 0 10px 10px;
+  margin: 0 10px;
 }
 
 .controlLabel {
@@ -45,4 +46,8 @@
   height: 1px;
   background: #ccc;
   margin: 12px 0;
+}
+
+input[type='color' i]::-webkit-color-swatch-wrapper {
+  padding: 0;
 }
