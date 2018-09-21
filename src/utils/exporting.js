@@ -25,7 +25,7 @@ function exportHtml({ terminalEl: element }) {
   return new Promise(resolve => {
     const css = buildCss()
     const markup = element.innerHTML
-    const content = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0}${css}</style></head><body>${markup}</body></html>`
+    const content = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>${css}body{margin:0}</style></head><body>${markup}</body></html>`
     const blob = new Blob([content], { type: 'text/html' })
     downloadBlob(blob, 'html')
     resolve()
