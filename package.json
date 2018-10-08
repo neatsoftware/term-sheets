@@ -1,7 +1,10 @@
 {
   "name": "term-sheets",
   "version": "1.0.0",
+  "description": "Create animated terminal presentations. Export as SVG, animated GIF, or HTML+CSS",
   "author": "Garth Poitras <garth22@gmail.com>",
+  "repository": "https://github.com/neatsoftware/term-sheets",
+  "license": "MIT",
   "scripts": {
     "start": "parcel src/index.html --no-cache",
     "build": "parcel build src/index.html --public-url '.' --no-source-maps --no-cache",
@@ -16,8 +19,8 @@
   "devDependencies": {
     "autoprefixer": "^9.1.5",
     "flt": "^0.6.0",
-    "parcel-bundler": "^1.9.7",
-    "postcss-modules": "^1.3.2"
+    "parcel-bundler": "^1.10.2",
+    "postcss-modules": "^1.4.1"
   },
   "browserslist": [
     "Chrome >= 49",

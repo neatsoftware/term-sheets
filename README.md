@@ -2,7 +2,7 @@
 
 Create animated terminal presentations. Export as SVG, animated GIF, or HTML+CSS.
 
-### [Use app ↗️](https://gpoitch.github.io/term-sheets)
+### [Use app ↗️](https://neatsoftware.github.io/term-sheets)
 
 ---
 
@@ -11,7 +11,7 @@ Term sheets is a JavaScript app to produce terminal typing and output animations
 ### Example:
 
 <p align="center">
-  <a href="https://rawgit.com/gpoitch/term-sheets/master/example.svg"><img width="700" src="https://rawgit.com/gpoitch/term-sheets/master/example.svg"></a>
+  <a href="https://cdn.jsdelivr.net/gh/neatsoftware/term-sheets@09b20859c30fdc98bd5f3b1b6cd9eff9de0ba8d8/example.svg"><img width="700" src="https://cdn.jsdelivr.net/gh/neatsoftware/term-sheets@09b20859c30fdc98bd5f3b1b6cd9eff9de0ba8d8/example.svg"></a>
 </p>
 
 ### [Documentation](DOCS.md)
