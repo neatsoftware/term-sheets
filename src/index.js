@@ -25,24 +25,24 @@ const state = {
 }
 
 const actions = {
-  updateBackground: e => ({ background: e.target.checked }),
-  updatebgColor1: e => ({ bgColor1: e.target.value }),
-  updatebgColor2: e => ({ bgColor2: e.target.value }),
-  updateTitleBar: e => ({ titleBar: e.target.checked }),
-  updateWindowButtons: e => ({ windowButtons: e.target.checked }),
-  updateTitle: e => ({ title: e.target.value }),
-  updatePrompt: e => ({ prompt: e.target.value }),
-  updatePromptColor: e => ({ promptColor: e.target.value }),
-  updateWidth: e => ({ width: e.target.value }),
-  updateHeight: e => ({ height: e.target.value }),
-  updateSpeed: e => ({ speed: e.target.value }),
-  updateExportType: e => ({ exportType: e.target.value }),
-  updateTerminalEl: element => ({ terminalEl: element }),
-  toggleEditingCommands: () => state => ({ isEditingCommands: !state.isEditingCommands }),
-  updateIsExporting: isExporting => ({ isExporting }),
-  updateDemo: e => (state, actions) => actions.updateCommandsAndPlay(demos[e.target.value]),
-  updateCommands: commands => ({ commands }),
-  updateCommandsAndPlay: commands => (state, actions) => {
+  updateBackground: (e) => ({ background: e.target.checked }),
+  updatebgColor1: (e) => ({ bgColor1: e.target.value }),
+  updatebgColor2: (e) => ({ bgColor2: e.target.value }),
+  updateTitleBar: (e) => ({ titleBar: e.target.checked }),
+  updateWindowButtons: (e) => ({ windowButtons: e.target.checked }),
+  updateTitle: (e) => ({ title: e.target.value }),
+  updatePrompt: (e) => ({ prompt: e.target.value }),
+  updatePromptColor: (e) => ({ promptColor: e.target.value }),
+  updateWidth: (e) => ({ width: e.target.value }),
+  updateHeight: (e) => ({ height: e.target.value }),
+  updateSpeed: (e) => ({ speed: e.target.value }),
+  updateExportType: (e) => ({ exportType: e.target.value }),
+  updateTerminalEl: (element) => ({ terminalEl: element }),
+  toggleEditingCommands: () => (state) => ({ isEditingCommands: !state.isEditingCommands }),
+  updateIsExporting: (isExporting) => ({ isExporting }),
+  updateDemo: (e) => (state, actions) => actions.updateCommandsAndPlay(demos[e.target.value]),
+  updateCommands: (commands) => ({ commands }),
+  updateCommandsAndPlay: (commands) => (state, actions) => {
     actions.updateCommands(commands)
     actions.restart()
   },

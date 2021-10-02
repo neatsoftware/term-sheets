@@ -3,11 +3,11 @@ import { commandEditor } from '../command-editor'
 import * as demos from '../../demos'
 import styles from './styles.css'
 
-const numbersOnly = e => {
+const numbersOnly = (e) => {
   if (e.which < 48 || e.which > 57) e.preventDefault()
 }
 
-export const controlsView = props =>
+export const controlsView = (props) =>
   props.isEditingCommands
     ? h(commandEditor, props)
     : h('div', { class: styles.controls }, [
@@ -112,7 +112,7 @@ export const controlsView = props =>
           h('button', { onclick: props.restart }, 'Restart'),
           h('select', { onchange: props.updateDemo, title: 'Demos' }, [
             h('option', { disabled: true, selected: true, hidden: true, value: '' }, 'Or select a demo'),
-            ...Object.keys(demos).map(name =>
+            ...Object.keys(demos).map((name) =>
               h('option', { value: name }, name.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase())
             )
           ])

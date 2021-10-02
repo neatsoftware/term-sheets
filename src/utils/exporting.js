@@ -13,7 +13,7 @@ export function exportProject(state) {
 }
 
 function exportSvg({ terminalEl: element, width, height }) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     const content = buildSvg(element, width, height)
     const blob = new Blob([content], { type: 'image/svg+xml' })
     downloadBlob(blob, 'svg')
@@ -22,7 +22,7 @@ function exportSvg({ terminalEl: element, width, height }) {
 }
 
 function exportHtml({ terminalEl: element }) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     const css = buildCss()
     const markup = element.innerHTML
     const content = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>${css}body{margin:0}</style></head><body>${markup}</body></html>`
@@ -43,8 +43,8 @@ function exportGif({ terminalEl: element, width, height, commands, speed }) {
     const numFrames = totalTime / GIF_FRAME_RATE
 
     const img = new Image()
-    img.onload = e =>
-      buildGifFrames(e.target, width, height, numFrames).then(frameImages => {
+    img.onload = (e) =>
+      buildGifFrames(e.target, width, height, numFrames).then((frameImages) => {
         createGIF(
           {
             numFrames,
@@ -54,7 +54,7 @@ function exportGif({ terminalEl: element, width, height, commands, speed }) {
             gifWidth: width,
             gifHeight: height
           },
-          result => {
+          (result) => {
             const { error, image: gifBase64 } = result
             if (error) reject(error)
             resolve(downloadUrl(gifBase64, 'gif'))
@@ -69,7 +69,7 @@ function buildGifFrames(img, width, height, numFrames) {
   return Promise.all(
     Array.apply(null, Array(Math.ceil(numFrames))).map(
       (_, i) =>
-        new Promise(resolve => {
+        new Promise((resolve) => {
           setTimeout(() => {
             const canvas = document.createElement('canvas')
             canvas.width = width

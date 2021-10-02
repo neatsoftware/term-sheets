@@ -6,7 +6,7 @@ export const DELAY_TYPE_CHAR = 35
 export const DELAY_TYPE_SUBMIT = 350
 export const DELAY_OUTPUT_LINE = 500
 
-export const terminalView = props =>
+export const terminalView = (props) =>
   h(
     'div',
     {
@@ -27,7 +27,7 @@ const terminalTitleView = ({ titleBar, title, windowButtons }) =>
     titleBar && title
   )
 
-const terminalContentView = props => {
+const terminalContentView = (props) => {
   const { commands, speed } = props
   const commandTimings = commands.reduce((timings, command, i) => {
     const inputTime =
@@ -47,9 +47,9 @@ const terminalContentView = props => {
   ])
 }
 
-const terminalCommandView = props => [h(terminalInputView, props), h(terminalOutputView, props)]
+const terminalCommandView = (props) => [h(terminalInputView, props), h(terminalOutputView, props)]
 
-const terminalInputView = props => {
+const terminalInputView = (props) => {
   const { commands, commandIndex, commandTimings, prompt, promptColor, speed } = props
   const command = commands[commandIndex]
   const { startDelay, inputTime } = commandTimings[commandIndex]
@@ -76,7 +76,7 @@ const terminalInputView = props => {
   ]
 }
 
-const terminalOutputView = props => {
+const terminalOutputView = (props) => {
   const { commands, commandIndex, commandTimings, speed } = props
   const { startDelay, inputTime } = commandTimings[commandIndex]
   const outputLines = commands[commandIndex].output || ['']

@@ -25,9 +25,9 @@ function save(props) {
   props.toggleEditingCommands()
 }
 
-export const commandEditor = props =>
+export const commandEditor = (props) =>
   h('div', { class: styles.commandEditor }, [
-    h('div', { class: styles.code }, [h('div', { oncreate: el => setupCodeEditor(el, props.commands) })]),
+    h('div', { class: styles.code }, [h('div', { oncreate: (el) => setupCodeEditor(el, props.commands) })]),
     h('button', { onclick: () => save(props) }, 'Save'),
     h('button', { onclick: props.toggleEditingCommands }, 'Cancel')
   ])

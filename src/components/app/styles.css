@@ -72,6 +72,7 @@ input {
 }
 
 .appLinks a {
+  text-decoration: none;
   text-transform: uppercase;
   margin: 0 20px;
   color: #444;

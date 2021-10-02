@@ -2,7 +2,7 @@
   "name": "term-sheets",
   "version": "1.0.0",
   "description": "Create animated terminal presentations. Export as SVG, animated GIF, or HTML+CSS",
-  "author": "Garth Poitras <garth22@gmail.com>",
+  "author": "Garth Poitras <garth@neat.software>",
   "repository": "https://github.com/neatsoftware/term-sheets",
   "license": "MIT",
   "scripts": {
@@ -12,14 +12,14 @@
     "clean": "rm -rf dist & rm -rf .*cache"
   },
   "dependencies": {
-    "codemirror": "^5.40.2",
+    "codemirror": "^5.63.1",
     "gifshot": "^0.4.5",
-    "hyperapp": "^1.2.9"
+    "hyperapp": "^1.2.10"
   },
   "devDependencies": {
-    "autoprefixer": "^9.1.5",
-    "flt": "^0.6.0",
-    "parcel-bundler": "^1.10.2",
+    "autoprefixer": "^9.8.7",
+    "flt": "^0.40.0",
+    "parcel-bundler": "^1.12.5",
     "postcss-modules": "^1.4.1"
   },
   "browserslist": [
