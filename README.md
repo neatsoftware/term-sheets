@@ -2,7 +2,7 @@
 
 Create animated terminal presentations. Export as SVG, animated GIF, or HTML+CSS.
 
-### [Use app ↗️](https://neatsoftware.github.io/term-sheets)
+### [Use app ↗️](https://term-sheets.neat.software)
 
 ---
 
