@@ -61,4 +61,4 @@ const actions = {
 
 const view = (state, actions) => h(appView, Object.assign(state, actions))
 
-export default app(state, actions, view, document.body)
+export default app(state, actions, view, document.getElementById('app'))
